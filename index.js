@@ -14,5 +14,9 @@ function clearDisplay(){
 
 
 function calculate(){
-    output.value = eval(output.value);
+    try {
+        output.value = eval(output.value);
+    } catch (error) {
+        output.value = "Error";
+    }
 }
